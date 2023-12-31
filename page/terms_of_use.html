@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- feuille de style less -->
+    <link rel="stylesheet/less" type="text/css" href="../less/styles.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+    <!-- fontAwesome -->
+    <script src="https://kit.fontawesome.com/cabff833b6.js" crossorigin="anonymous"></script>
+    <!-- java script -->
+    <script src="../js/script.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Conditions d'utilisation - Lugh</title>
+</head>
+
+<body>
+    <!-- content section starts -->
+    <div class="max-width">
+        <div class="container">
+            <header>
+                <div class="appLogo">
+                    <img src="../img/app_logo.png" alt="Lugh's logo" width="100" height="100">
+                    <img src="../img/app_name.png" alt="Lugh's name" width="120" height="30">
+                </div>
+                <h1>Conditions d'utilisation</h1>
+                <h1>Plan de Sécurité des Systèmes d'Information (PSSI)</h1>
+                <h2>Document d'orientation de la sécurité des systèmes d'information de Lugh</h2>
+            </header>
+            <!-- 1. -->
+            <section>
+                <h2>1. Contexte et objectifs</h2>
+
+                <h3>1.1. Contexte</h3>
+                <p>Lugh est une équipe constituée de 7 personnes, dont chacun possède une spécialité. On y retrouve :
+                    IA, Cloud et Sécurité, Gestion de projet. Cette diversité permet à notre équipe de nous adapter et
+                    permet la mise en place de différents types de projet. Le but du projet Lugh est de créer une
+                    application mobile permettant aux utilisateurs de s’inscrire et réserver une session/séance de sport
+                    ou autre activité mis en place par ses organismes. Certaines de ses séances auront un coût défini
+                    par Lugh. L’utilisateur aura aussi le choix de prendre un abonnement pour bénéficier de coûts
+                    réduits.</p>
+
+                <h3>1.2. Périmètre de la SSI</h3>
+                <p>La sécurité des systèmes d’information (SSI) de Lugh couvre l’ensemble des systèmes d’information
+                    avec toute la diversité que cela implique, les lieux d’utilisation, les méthodes d’accès, les
+                    personnes concernées...</p>
+                <ul>
+                    <li>Applications mobile : L’Application mobile est le moteur principal de Lugh permettant de
+                        s’inscrire, se connecter, réserver des séances et payer.</li>
+                    <li>Réseau de communication : Un réseau de communication sécurisé sera mis en place pour transmettre
+                        les données collectées par l'application.</li>
+                    <li>Serveurs : Ces serveurs recevront, stockeront et traiteront les données collectées. Les modèles
+                        d'intelligence artificielle pour la reconnaissance seront également exécutés sur ces serveurs.
+                    </li>
+                    <li>Bases de données : Des bases de données seront utilisées pour stocker les données des
+                        utilisateurs (Email, Prénom, Nom, Mot de passe, etc).</li>
+                    <li>Interfaces clients : Les clients auront accès à une application mobile sécurisée, accessible via
+                        un Smartphone.</li>
+                </ul>
+
+                <h3>1.3. Limite du périmètre</h3>
+                <p>Les données personnelles des clients seront strictement utilisées dans le cadre de ce projet et ne
+                    seront pas partagées avec des tiers sans le consentement explicite des clients concernés. Le
+                    périmètre du projet exclut les infrastructures tierces sur lesquelles les clients peuvent accéder à
+                    l'interface client (par exemple, les ordinateurs personnels ou les dispositifs mobiles des clients),
+                    ainsi que les réseaux publics utilisés pour accéder à l'interface client. La sécurité de ces
+                    dispositifs et réseaux relève de la responsabilité des clients eux-mêmes.</p>
+
+                <h3>1.4. Besoins de sécurité</h3>
+                <p>La sécurité du Système d’Information repose sur les critères suivants :</p>
+                <ul>
+                    <li>Confidentialité : « La confidentialité est la propriété qu’une information n’est ni disponible
+                        ni divulguée aux personnes, composantes ou processus non autorisés » norme ISO 7498-2 (ISO90).
+                    </li>
+                    <li>Disponibilité : Propriété d’accessibilité au moment voulu des données et des fonctions par les
+                        utilisateurs autorisés.</li>
+                    <li>Intégrité : « L’intégrité est la prévention d’une modification non autorisée de l’information »
+                        norme ISO 7498-2 (ISO90).</li>
+                </ul>
+                <p>Les besoins de sécurité s’appliquent aussi bien aux ressources du système d’information (postes
+                    informatiques, réseaux, applications…) qu’aux données traitées par ces ressources. Il est nécessaire
+                    d’inventorier et de classifier ces données (gestion, nominative, stratégique…) afin d’en identifier
+                    le degré de sensibilité et donc le besoin de protection nécessaire.</p>
+
+                <h3>1.5. Pilotage</h3>
+                <p>Au sein de notre projet, la responsabilité générale de la sécurité des systèmes d’information relève
+                    du Directeur en tant qu’Autorité Qualifiée pour la Sécurité des Systèmes d’Information (AQSSI). Il
+                    est assisté dans cette fonction par le Responsable de la Sécurité des Systèmes d’Information (RSSI).
+                    Le pilotage courant est de la responsabilité du RSSI.</p>
+            </section>
+            <!-- 2. -->
+            <section>
+                <h2>2.0 Analyse des Risques</h2>
+
+                <p>L'analyse des risques vise à identifier les menaces potentielles et les vulnérabilités liées à la
+                    mise en œuvre du projet Lugh. Cette analyse permettra de mettre en place des mesures de sécurité
+                    appropriées pour atténuer ces risques. Voici les principaux risques identifiés :</p>
+
+                <h3>2.1 Risques liés à la sécurité des données</h3>
+                <p><strong>Risque :</strong> Accès non autorisés aux données client : Une violation de la sécurité ou
+                    une faille dans les mécanismes d'authentification pourrait permettre à des acteurs malveillants
+                    d'accéder aux données sensibles des clients, compromettant ainsi leur confidentialité.</p>
+                <p><strong>Vol ou altération des données :</strong> Des cybercriminels pourraient tenter de voler ou de
+                    manipuler les données des champs pour perturber les opérations agricoles ou obtenir un avantage
+                    concurrentiel injuste.</p>
+
+                <h3>2.2 Collecte et Stockage des Données</h3>
+                <p><strong>Risque :</strong> Accès non autorisé aux données personnelles collectées lors de
+                    l'inscription et des réservations de cours.</p>
+                <p><strong>Mesures de Mitigation :</strong></p>
+                <ul>
+                    <li>Les données sensibles (nom, adresse, informations de paiement) doivent être stockées de manière
+                        sécurisée.</li>
+                    <li>Utilisation du chiffrement pour les données sensibles en transit et au repos.</li>
+                </ul>
+
+                <h3>2.3 Authentification et Gestion des Identifiants</h3>
+                <p><strong>Risque :</strong> Utilisation non autorisée des comptes utilisateur.</p>
+                <p><strong>Mesures de Mitigation :</strong></p>
+                <ul>
+                    <li>Mise en place d'une authentification forte (authentification à deux facteurs).</li>
+                    <li>Surveillance des tentatives d'accès non autorisées et verrouillage des comptes en cas de
+                        tentative suspecte.</li>
+                </ul>
+
+                <h3>2.4 Risques liés à la disponibilité du service</h3>
+                <p><strong>Risque :</strong> Panne des serveurs centraux : Une panne des serveurs centraux pourrait
+                    entraîner une interruption du service, empêchant ainsi les clients d'accéder à leurs données.</p>
+                <p><strong>Perte de données :</strong> En cas de défaillance du système de sauvegarde, des données
+                    importantes pourraient être perdues, affectant ainsi la continuité des activités des clients.</p>
+
+                <h3>2.5 Partage d'Informations</h3>
+                <p><strong>Risque :</strong> Divulgation non autorisée d'informations utilisateur.</p>
+                <p><strong>Mesures de Mitigation :</strong></p>
+                <ul>
+                    <li>Contrôle strict des autorisations d'accès aux données.</li>
+                    <li>Minimisation de la collecte d'informations à celles nécessaires pour la réservation et le
+                        paiement.</li>
+                </ul>
+
+                <h3>2.6 Gestion des Cookies et Données de Navigation</h3>
+                <p><strong>Risque :</strong> Utilisation non autorisée ou vol de cookies de session.</p>
+                <p><strong>Mesures de Mitigation :</strong></p>
+                <ul>
+                    <li>Utilisation de mécanismes sécurisés pour gérer les sessions.</li>
+                    <li>Chiffrement des cookies de session.</li>
+                </ul>
+
+                <h3>2.7 Évaluation de la Probabilité et de l’Impact</h3>
+                <p><strong>Probabilité :</strong> La probabilité d'accès non autorisé aux données peut être réduite par
+                    des contrôles de sécurité efficaces, tels que l'authentification forte et le chiffrement des
+                    données.</p>
+                <p><strong>Impact :</strong> L'impact d'une violation de la confidentialité des données peut être
+                    significatif en termes de réputation, de confiance des utilisateurs et de conformité aux
+                    réglementations.</p>
+
+                <h3>2.8 Mesures d'Atténuation des Risques</h3>
+                <ul>
+                    <li><strong>Chiffrement :</strong> Toutes les données sensibles, y compris les informations
+                        utilisateur et les données de paiement, doivent être chiffrées en transit et au repos.</li>
+                    <li><strong>Contrôles d'Accès :</strong> Mettre en place des contrôles d'accès stricts pour garantir
+                        que seules les personnes autorisées peuvent accéder aux données sensibles.</li>
+                    <li><strong>Audit et Surveillance :</strong> Mettre en place des mécanismes d'audit et de
+                        surveillance pour détecter toute activité suspecte et répondre rapidement en cas d’incident.
+                    </li>
+                    <li><strong>Formation des Utilisateurs :</strong> Sensibiliser les utilisateurs sur l'importance de
+                        la sécurité des informations et les bonnes pratiques pour protéger leurs comptes.</li>
+                </ul>
+
+                <p>En adoptant ces mesures, "Lugh" peut réduire les risques liés à la confidentialité des données
+                    personnelles des utilisateurs et renforcer la confiance dans l'application.</p>
+
+                <h3>2.9 Risques liés à la vie privée</h3>
+                <p><strong>Divulgation non autorisée de données clients :</strong> Des erreurs de configuration ou des
+                    failles de sécurité pourraient conduire à la divulgation de données personnelles des clients,
+                    violant ainsi leur vie privée.</p>
+                <p><strong>Consentement des clients :</strong> Le manque de consentement clair de la part des clients
+                    concernant la collecte et l'utilisation de leurs données pourrait entraîner des problèmes de
+                    conformité réglementaire et des litiges.</p>
+            </section>
+            <!-- 3. -->
+            <section>
+                <h2>3.0 Mesures de Sécurité</h2>
+
+                <h3>3.1 Sécurité des Communications</h3>
+                <p><strong>Chiffrement des données en transit :</strong> Toutes les communications entre les capteurs
+                    IoT, les serveurs et les interfaces clients seront chiffrées à l'aide de protocoles de chiffrement
+                    robustes (MQTT) pour prévenir l'interception et la lecture des données par des tiers non autorisés.
+                    (Voir annexe Sécurisation des Données transitant entre les différents Arduino et les Serveurs.)</p>
+                <p><strong>Authentification des capteurs IoT :</strong> Chaque capteur IoT sera associé à des
+                    certificats d'authentification uniques afin de garantir que seuls les capteurs approuvés peuvent
+                    communiquer avec les serveurs.</p>
+
+                <h3>3.2 Gestion des Accès</h3>
+                <p><strong>Privilèges d'accès différenciés :</strong> Les droits d'accès des clients seront configurés
+                    de manière qu'ils puissent uniquement consulter les données de leur champ spécifique, empêchant
+                    ainsi l'accès non autorisé à d'autres données.</p>
+
+                <h3>3.3 Protection des Données</h3>
+                <p><strong>Sauvegardes régulières :</strong> Les données collectées seront sauvegardées régulièrement
+                    sur des serveurs de sauvegarde sécurisés pour éviter la perte de données en cas d'incident majeur.
+                </p>
+                <p><strong>Chiffrement des données au repos :</strong> Toutes les données sensibles stockées dans les
+                    bases de données seront chiffrées pour protéger leur confidentialité en cas d'accès physique non
+                    autorisé.</p>
+
+                <h3>3.4 Sécurité des Systèmes</h3>
+                <p><strong>Mise à jour et gestion des correctifs :</strong> Les systèmes d'exploitation, les logiciels
+                    et les dispositifs IoT seront régulièrement mis à jour avec les derniers correctifs de sécurité pour
+                    réduire les vulnérabilités potentielles.</p>
+                <p><strong>Surveillance continue :</strong> Un SIEM et un antivirus seront mis en place pour détecter
+                    les activités suspectes et les tentatives d'intrusion, permettant ainsi une réponse rapide en cas
+                    d'incident. (Voir annexe Cybersécurité)</p>
+
+                <h3>3.5 Sensibilisation à la Sécurité</h3>
+                <p><strong>Formation du personnel :</strong> Tous les membres du personnel impliqués dans le projet
+                    seront formés aux bonnes pratiques de sécurité des informations et aux procédures à suivre en cas
+                    d'incident.</p>
+                <p><strong>Notification des clients :</strong> Les clients seront informés des mesures de sécurité en
+                    place et des bonnes pratiques à suivre pour protéger leurs informations personnelles.</p>
+            </section>
+            <!-- 4. -->
+            <section>
+                <h2>4.0 Chiffrement des Données</h2>
+
+                <h3>4.1 Chiffrement des Données en Transit</h3>
+                <p>Toutes les données transitant entre les différents éléments du système seront chiffrées à l'aide du
+                    protocole MQTT (Voir annexe Sécurisation des Données transitant entre les différents Arduino et les
+                    Serveurs.)</p>
+
+                <h3>4.2 Chiffrement des Données au Repos</h3>
+                <p>Les données collectées et stockées dans les bases de données seront également chiffrées pour protéger
+                    leur confidentialité, même en cas d'accès physique non autorisé aux serveurs. Le chiffrement au
+                    repos sera appliqué sur les données sensibles des clients, les informations sur les champs et les
+                    résultats de l'analyse IA. Le chiffrement des données au repos sera effectué à l'aide d'algorithmes
+                    de chiffrement robustes et conformes aux meilleures pratiques de l'industrie.</p>
+
+                <h3>4.3 Gestion des Clés de Chiffrement</h3>
+                <p>La gestion des clés de chiffrement sera réalisée de manière sécurisée. Les clés de chiffrement seront
+                    stockées dans un coffre-fort cryptographique, accessible uniquement aux personnes autorisées du
+                    personnel technique, et leur accès sera strictement contrôlé. Des mécanismes de rotation régulière
+                    des clés seront également mis en place pour renforcer la sécurité du système.</p>
+
+                <h3>4.4 Authentification des Clés de Chiffrement</h3>
+                <p>Les clés de chiffrement utilisées pour le chiffrement des données en transit et au repos seront
+                    authentifiées pour garantir leur intégrité et empêcher les attaques de type "man-in-the-middle".</p>
+
+                <h3>4.5 Surveillance et Audit</h3>
+                <p>Un système de surveillance continu sera mis en place pour détecter toute tentative d'accès non
+                    autorisé aux données chiffrées et pour vérifier l'intégrité du chiffrement. Des journaux d'audit
+                    seront enregistrés pour permettre un suivi détaillé des opérations de chiffrement et des tentatives
+                    d'accès.</p>
+            </section>
+            <!-- 5. -->
+            <section>
+                <h2>5. Gestion des Accès</h2>
+
+                <h3>5.1 Authentification et Identification des Utilisateurs</h3>
+                <p>Tous les utilisateurs devront s'authentifier avant d'accéder à leur interface client.
+                    L'authentification se fera via un processus multi-facteurs, incluant :</p>
+                <ul>
+                    <li>Un identifiant unique (par exemple, une adresse e-mail ou un nom d'utilisateur)</li>
+                    <li>Un mot de passe fort, respectant les normes de complexité</li>
+                    <li>Une authentification à double facteurs</li>
+                </ul>
+                <p>Les identifiants et les mots de passe seront stockés de manière sécurisée à l'aide de méthodes de
+                    hachage sécurisées et de salage pour empêcher toute récupération non autorisée des informations
+                    d'identification.</p>
+
+                <h3>5.2 Gestion des Privilèges d'Accès</h3>
+                <p>Une fois authentifiés, les utilisateurs se verront attribuer des privilèges d'accès différenciés en
+                    fonction de leur rôle. Les utilisateurs n'auront accès qu'aux informations nécessaires à leur
+                    activité spécifique.</p>
+
+                <h3>5.3 Contrôles d'Accès et Autorisation</h3>
+                <p>Des contrôles d'accès rigoureux seront mis en place pour s'assurer que les utilisateurs ne peuvent
+                    accéder qu'aux ressources autorisées. Des listes de contrôle d'accès (ACL) seront utilisées pour
+                    définir les autorisations spécifiques pour chaque utilisateur ou groupe d'utilisateurs. Les accès à
+                    distance aux systèmes critiques seront limités aux adresses IP autorisées, et les règles de pare-feu
+                    seront configurées pour prévenir toute intrusion non autorisée.</p>
+
+                <h3>5.4 Gestion des Sessions et Déconnexion Automatique</h3>
+                <p>Pour prévenir les accès non autorisés en cas d'inactivité, les sessions des utilisateurs seront
+                    automatiquement déconnectées après une période d'inactivité définie. Cela réduira le risque d’accès
+                    non autorisés si un utilisateur oublie de se déconnecter manuellement.</p>
+
+                <h3>5.5 Suivi des Accès et Journalisation</h3>
+                <p>Toutes les activités liées aux accès et aux privilèges seront enregistrées dans des journaux d’audit.
+                    Ces journaux permettront de suivre les actions des utilisateurs et de détecter toute activité
+                    suspecte ou non autorisée.</p>
+            </section>
+            <!-- 6. -->
+            <section>
+                <h2>6. Surveillance et Détection des Incidents avec SIEM Elastic Search</h2>
+
+                <h3>6.1 SIEM Elastic Search</h3>
+                <p>La surveillance continue et la détection rapide des incidents sont essentielles pour maintenir la
+                    sécurité et l'intégrité du projet. Afin de détecter les comportements anormaux et les tentatives
+                    d'intrusion, un système de SIEM basé sur Elastic Search sera mis en place pour centraliser, analyser
+                    et corréler les événements de sécurité de l'ensemble de l'infrastructure du projet.</p>
+
+                <h3>6.2 Détection d'Anomalies</h3>
+                <p>En utilisant les capacités avancées d'analyse des données d'Elastic Search, des algorithmes de
+                    détection d'anomalies seront appliqués pour identifier les comportements inhabituels et les schémas
+                    d'activité potentiellement malveillants. L'utilisation de machine learning avec Elastic Search
+                    permettra une détection proactive des attaques et des tentatives d’intrusion.</p>
+
+                <h3>6.3 Détection d'Intrusion</h3>
+                <p>Le SIEM avec Elastic Search sera configuré pour surveiller en temps réel les événements de sécurité à
+                    travers des règles et des corrélations d'événements. Les tentatives d'intrusion, les scans de port,
+                    les attaques DDoS et d'autres activités malveillantes seront détectées et des alertes seront
+                    générées automatiquement.</p>
+
+                <h3>6.4 Analyse des Journaux d'Audit</h3>
+                <p>Les journaux d'audit enregistrés dans Elastic Search seront régulièrement analysés. Cette analyse
+                    permettra de détecter toute anomalie dans le système, les erreurs potentielles et les tentatives
+                    d'accès non autorisé, fournissant ainsi une visibilité approfondie sur l'état de la sécurité du
+                    projet.</p>
+
+                <h3>6.5 Alertes et Notifications</h3>
+                <p>Le SIEM Elastic Search sera configuré pour envoyer des alertes en temps réel aux membres du personnel
+                    technique en cas d'événements de sécurité critiques. Des notifications seront également envoyées
+                    pour informer les équipes de sécurité des incidents de sécurité potentiels.</p>
+
+                <h3>6.6 Rétention des Données de Sécurité</h3>
+                <p>Les données de sécurité collectées par le SIEM Elastic Search seront conservées conformément aux
+                    politiques de rétention définies. Une durée de rétention appropriée sera appliquée aux journaux pour
+                    assurer la disponibilité des informations historiques en cas d'enquêtes ultérieures sur des
+                    incidents passés.</p>
+            </section>
+            <!-- 7. -->
+            <section>
+                <h2>7.0 Plan de Sauvegarde et de Restauration</h2>
+
+                <h3>7.1 Stratégie de Sauvegarde</h3>
+                <p>Une stratégie de sauvegarde régulière sera mise en place pour chaque composant du système, y compris
+                    les données des utilisateurs, les bases de données, les modèles IA. Les sauvegardes seront
+                    planifiées de manière périodique, en fonction de la fréquence de mise à jour des données et de leur
+                    importance.</p>
+
+                <h3>7.2 Localisation des Sauvegardes</h3>
+                <p>Les données de sauvegarde seront stockées dans un emplacement sécurisé et via un autre hébergeur afin
+                    de prévenir tout risque.</p>
+
+                <h3>7.3 Plan de Restaurations</h3>
+                <p>Un plan de restauration sera mis en place en cas de défaillance système et base de données. Ce plan
+                    définira les responsabilités techniques, les procédures à suivre et les délais de remise en service.
+                </p>
+
+                <h3>7.4 Encryptions des Sauvegardes</h3>
+                <p>Les sauvegardes seront cryptées pour garantir la confidentialité des données sensibles en cas de
+                    perte ou vol de données.</p>
+            </section>
+            <!-- 8. -->
+            <section>
+                <h2>8.0 Conformité aux Règlementations et Normes de Sécurité</h2>
+
+                <h3>8.1 Règlement Général sur la Protection des Données (RGPD)</h3>
+                <p>Nous appliquerons la RGPD, qui est une réglementation européenne visant à protéger les données
+                    personnelles des citoyens de l'Union européenne. Cela comprend la collecte et le traitement légal
+                    des données, l'obtention du consentement explicite des clients pour le traitement de leurs données,
+                    la mise en place de mesures de sécurité appropriées pour protéger les données, et le respect du
+                    droit des clients d'accéder à leurs données et de les rectifier si nécessaire. (Se référer à
+                    l’annexe RGPD)</p>
+
+                <h3>8.2 Loi Informatique et Libertés</h3>
+                <p>Conformément à la Loi Informatique et Libertés en France, nous mettrons en place des politiques et
+                    des procédures strictes pour garantir la confidentialité et la sécurité des données personnelles des
+                    clients. Nous informerons les clients sur la collecte, l'utilisation et la conservation de leurs
+                    données, et nous recueillerons leur consentement pour le traitement de leurs données dans le cadre
+                    du projet.</p>
+            </section>
+        </div>
+    </div>
+    <!-- footer section starts -->
+    <footer>
+        <span><a href="#">Lugh</a> | <span class="far fa-copyright"> 2023 Tous droits réservés.</span></span>
+    </footer>
+</body>
+
+</html>
